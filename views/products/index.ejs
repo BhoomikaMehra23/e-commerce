@@ -1,0 +1,89 @@
+
+<% layout('layouts/boilerplate') %>
+<%-include('../partials/flash')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #flex{
+        position: relative;
+        top: 30px;
+        right: 60px;
+        width:90vw;
+        height: 15vh;
+        background-color: rgb(203, 198, 198);
+        /* border-radius: 30%; */
+        align-items: center;
+
+    }
+    h1{
+        /* font-size: 30px; */
+        /* top: 3px; */
+        position: relative;
+        left: 140px;
+        bottom: 50px;
+
+    }
+    #img2{
+        position: relative;
+        left: 60px;
+        top: 12px;
+        border-radius: 50%;
+    }
+    /* .col-lg-4 product-card{
+        position: relative;
+        top: 30vh;
+    } */
+</style>
+<body>
+    <div id="flex">
+      <img id="img2" src="https://static.vecteezy.com/system/resources/previews/000/616/943/original/vector-shopping-bag-icon.jpg" width="70px" height="70px" >
+    
+        <h1>Shopping Cart</h1>
+    </div>
+    <div class="row">
+    
+
+        <% for(let item of products){ %>
+    
+            <div class="col-lg-4 product-card">
+                <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem; top: 15vh;">
+                    <img class="img" src="<%=item.img%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"> <%= item.name %> </h3>
+                      <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                      <p class="card-text"> <%= item.desc %> </p>
+                      <a href="/products/<%=item._id%>" class="btn btnn btn-primary">View Product</a>
+                    </div>
+                </div>
+            </div>
+            
+        <% } %>
+    </div>
+    
+</body>
+</html>
+
+<div class="row">
+    
+
+    <% for(let item of products){ %>
+
+        <div class="col-lg-4 product-card">
+            <div class="card text-center shadow mt-2 mx-auto" style="width: 18rem; top: 20vh;">
+                <img class="img" src="<%=item.img%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title"> <%= item.name %> </h3>
+                  <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                  <p class="card-text"> <%= item.desc %> </p>
+                  <a href="/products/<%=item._id%>" class="btn btnn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+        
+    <% } %>
+</div>

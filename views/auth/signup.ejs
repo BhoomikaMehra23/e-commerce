@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                h1{
+            position: relative;
+            left: 90vh;
+            font-size: 50px;
+
+        }
+        form{
+            position:relative;
+            left: 80vh;
+        }
+        form > div{
+            font-size: 30px;
+            padding: 10px;
+        }
+        button{
+            position: relative;
+            font-size: 25px;
+
+        }
+        .form-content
+         {
+            margin-bottom: 16px;
+        }
+        .form-content label
+         {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        } 
+        .form-content input 
+        {
+            width:23vw;
+            padding: 5px;
+            border: 1px solid rgb(65, 63, 63) ;
+            border-radius: 5px;
+        }
+        .submit-btn 
+        {
+            width: 24vw;
+            padding: 12px;
+            margin-top: 4px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .submit-btn:hover
+        {
+            background-color: rgb(7, 77, 7);
+        }
+    </style>
+</head>
+<body>
+      <h1>Signup page</h1> 
+    <!-- <form action="/register" method="post">
+
+        <div>
+            <label for="mail">Email</label>
+            <input type="email" name="email" id="mail"> 
+        </div>
+        <div>
+            <label for="naam">Username</label>
+            <input type="text" name="username" id="naam"> 
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" name="password" id="pass">
+        </div>
+        <button type="submit">Signup</button>
+    </form> --> 
+    <form action="/register" method="post">
+
+        <!-- <form id="validationForm" onsubmit="return validateForm()"> -->
+            <div class="form-content">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <!-- <div id="usernameError" class="error"></div> -->
+            </div>
+            <div class="form-content">
+                <label for="mail">Email:</label>
+                <input type="email" id="email" name="mail" placeholder="Email">
+                <!-- <div id="passwordError" class="error"></div> -->
+            </div>
+            <div class="form-content">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" placeholder="Password">
+                <!-- <div id="passwordError" class="error"></div> -->
+            </div>
+            <div class="form-content">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required placeholder="Age">
+                <!-- <div id="usernameError" class="error"></div> -->
+            </div>            
+            <div class="form-content">
+                <label for="adhaarnumber">Adhaar Number:</label>
+                <input type="number" id="adhaarnumber" name="adhaarnumber" required placeholder="adhaarnumber">
+                <!-- <div id="usernameError" class="error"></div> -->
+            </div>
+            <div class="form-content">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required placeholder="gender">
+                <!-- <div id="usernameError" class="error"></div> -->
+            </div>
+            <div class="form-content">
+                <label for="address"><Address></Address>Address:</label>
+                <input type="text" id="address" name="address" required placeholder="address">
+                <!-- <div id="usernameError" class="error"></div> -->
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <!-- <h3>Don't have an account yet?<a href="/register">SignUp</a></h3> -->
+                <!-- <button id="log"><a href="/login">Login</a></button> -->
+
+        </form>
+</body>
+</html>
